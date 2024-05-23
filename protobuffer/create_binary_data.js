@@ -40,7 +40,7 @@ const create_binary_data = () => {
     const employee_list = new Schema.EmployeeList();
 
 
-    for (let curr_employee in EMPLOYEES) {
+    for (let curr_employee of EMPLOYEES) {
         // processing each employee 
         const new_employee = new Schema.Employee();
         new_employee.setName(curr_employee.name)
