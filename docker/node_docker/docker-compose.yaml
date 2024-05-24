@@ -1,0 +1,12 @@
+version: '3.0'
+
+services:
+  sample_node:
+    image: node:latest
+    container_name: sample_node_app
+    working_dir: /src/app
+    volumes:
+      - .:/src/app
+    ports:
+      - 8000:8000
+    command: bash -c "npm install && node app.js"
